@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hybrid Homes | Beautiful Home Decor Ideas & Inspiration</title>
+
+  <meta name="description" content="Discover beautiful home decor ideas, bedroom inspiration, kitchen designs, bathroom ideas, outdoor spaces, organization tips and DIY home decor inspiration.">
+
+  <meta name="keywords" content="home decor, interior design, bedroom ideas, kitchen design, bathroom ideas, outdoor decor, home organization, DIY decor">
+
+  <meta name="theme-color" content="#f7f4ef">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf9f6;
+      color: #252525;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e8e5df;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+    /* HERO */
+
+    .hero {
+      max-width: 1200px;
+      margin: 35px auto;
+      padding: 0 24px;
+    }
+
+    .hero-box {
+      min-height: 570px;
+      border-radius: 22px;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.25),
+          rgba(0,0,0,0.25)
+        ),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+      display: flex;
+      align-items: flex-end;
+      padding: 55px;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .hero-content span {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1;
+      margin: 15px 0;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 560px;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      background: white;
+      color: #222;
+      padding: 13px 22px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* SECTION */
+
+    .section {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading span {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #777;
+    }
+
+    .section-heading h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      margin-top: 5px;
+    }
+
+    /* CATEGORIES */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .category {
+      height: 250px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .category::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.65));
+    }
+
+    .category h3 {
+      position: relative;
+      z-index: 1;
+      font-family: Georgia, serif;
+      font-size: 24px;
+    }
+
+    .bedroom {
+      background-image: url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .kitchen {
+      background-image: url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .bathroom {
+      background-image: url("https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=900&q=80");
+    }
+
+    .outdoor {
+      background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80");
+    }
+
+    /* ARTICLES */
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .article {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #eeeae3;
+      transition: transform .2s ease;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+    }
+
+    .article img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-content {
+      padding: 22px;
+    }
+
+    .article-category {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      color: #8a8175;
+    }
+
+    .article h3 {
+      font-family: Georgia, serif;
+      font-size: 23px;
+      line-height: 1.25;
+      margin: 9px 0;
+    }
+
+    .article p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter {
+      background: #eee9e0;
+      border-radius: 22px;
+      padding: 65px 30px;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-family: Georgia, serif;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .newsletter p {
+      max-width: 550px;
+      margin: auto;
+      color: #666;
+    }
+
+    .newsletter-form {
+      margin: 25px auto 0;
+      display: flex;
+      max-width: 500px;
+      gap: 10px;
+    }
+
+    .newsletter input {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 30px;
+      padding: 14px 18px;
+      font-size: 14px;
+    }
+
+    .newsletter button {
+      border: none;
+      background: #252525;
+      color: white;
+      border-radius: 30px;
+      padding: 14px 22px;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #222;
+      color: white;
+      margin-top: 80px;
+      padding: 55px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h3 {
+      font-family: Georgia, serif;
+      font-size: 27px;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      color: #aaa;
+      max-width: 400px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    footer a {
+      display: block;
+      color: #aaa;
+      margin: 7px 0;
+      font-size: 14px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 45px auto 0;
+      padding-top: 25px;
+      border-top: 1px solid #444;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .header-inner {
+        padding: 16px 18px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        margin-top: 20px;
+      }
+
+      .hero-box {
+        min-height: 520px;
+        padding: 30px;
+        border-radius: 18px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .section {
+        margin: 60px auto;
+      }
+
+      .section-heading h2 {
+        font-size: 32px;
+      }
+
+      .categories {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category {
+        height: 210px;
+      }
+
+      .articles {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter button {
+        width: 100%;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+
+      <a href="/" class="logo">
+        Hybrid Homes
+      </a>
+
+      <nav>
+        <a href="/">Home</a>
+        <a href="#categories">Decor</a>
+        <a href="#articles">Ideas</a>
+        <a href="#about">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-box">
+
+        <div class="hero-content">
+
+          <span>Home Decor Inspiration</span>
+
+          <h1>
+            Make Your Home Feel Like You.
+          </h1>
+
+          <p>
+            Beautiful, practical and inspiring ideas for creating
+            a home you genuinely love living in.
+          </p>
+
+          <a href="#articles" class="button">
+            Explore Ideas
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="section" id="categories">
+
+      <div class="section-heading">
+        <span>Explore</span>
+        <h2>Find Your Inspiration</h2>
+      </div>
+
+      <div class="categories">
+
+        <a href="#" class="category bedroom">
+          <h3>Bedroom Ideas</h3>
+        </a>
+
+        <a href="#" class="category kitchen">
+          <h3>Kitchen Design</h3>
+        </a>
+
+        <a href="#" class="category bathroom">
+          <h3>Bathroom Ideas</h3>
+        </a>
+
+        <a href="#" class="category outdoor">
+          <h3>Outdoor Decor</h3>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ARTICLES -->
+
+    <section class="section" id="articles">
+
+      <div class="section-heading">
+        <span>Latest Inspiration</span>
+        <h2>Beautiful Ideas for Every Space</h2>
+      </div>
+
+      <div class="articles">
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+            alt="Warm modern bedroom interior"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Bedroom
+            </span>
+
+            <h3>
+              30 Cozy Bedroom Ideas You'll Want to Copy
+            </h3>
+
+            <p>
+              Discover warm colors, soft textures, layered
+              bedding and simple details that make a bedroom
+              feel incredibly inviting.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern kitchen interior"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Kitchen
+            </span>
+
+            <h3>
+              Modern Kitchen Ideas That Feel Expensive
+            </h3>
+
+            <p>
+              Explore beautiful cabinetry, lighting,
+              countertops and styling ideas that elevate
+              an everyday kitchen.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1000&q=85"
+            alt="Relaxing modern bathroom"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Bathroom
+            </span>
+
+            <h3>
+              Spa-Like Bathroom Ideas for Your Home
+            </h3>
+
+            <p>
+              Turn your bathroom into a calm and relaxing
+              space with thoughtful lighting, textures
+              and natural materials.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+            alt="Stylish living room"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Living Room
+            </span>
+
+            <h3>
+              Simple Living Room Ideas That Look Beautiful
+            </h3>
+
+            <p>
+              Create a comfortable and stylish living room
+              using furniture, lighting and decor that work
+              together naturally.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+            alt="Organized home interior"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Organization
+            </span>
+
+            <h3>
+              Home Organization Ideas That Actually Look Good
+            </h3>
+
+            <p>
+              Make organization part of your decor with
+              beautiful storage solutions and practical
+              ideas for everyday spaces.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="article">
+
+          <img
+            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant home interior"
+          >
+
+          <div class="article-content">
+
+            <span class="article-category">
+              Interior Design
+            </span>
+
+            <h3>
+              Japandi Interiors That Balance Warmth and Minimalism
+            </h3>
+
+            <p>
+              Explore the calming combination of Japanese
+              simplicity and Scandinavian comfort.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="section">
+
+      <div class="newsletter">
+
+        <h2>
+          Make Your Space Beautiful
+        </h2>
+
+        <p>
+          Get fresh home decor inspiration, practical ideas
+          and beautiful spaces delivered straight to you.
+        </p>
+
+        <form class="newsletter-form">
+
+          <input
+            type="email"
+            placeholder="Your email address"
+            aria-label="Email address"
+          >
+
+          <button type="submit">
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer id="about">
+
+    <div class="footer-inner">
+
+      <div>
+
+        <h3>Hybrid Homes</h3>
+
+        <p>
+          Beautiful and practical home inspiration for
+          creating spaces that feel comfortable,
+          personal and timeless.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="#">Bedroom Ideas</a>
+        <a href="#">Kitchen Design</a>
+        <a href="#">Bathroom Ideas</a>
+        <a href="#">Outdoor Decor</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>More</h4>
+
+        <a href="#">Home Organization</a>
+        <a href="#">DIY Decor</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      © 2026 Hybrid Homes. All rights reserved.
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    document.querySelector(".newsletter-form").addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert("Thanks for subscribing to Hybrid Homes!");
+
+    });
+
+  </script>
+
+</body>
+</html>

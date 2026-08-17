@@ -2,23 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-  <!-- IMPORTANT: Makes the website properly responsive on phones -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Hybrid Homes — Beautiful Spaces. Better Living.</title>
 
   <meta
     name="description"
-    content="Hybrid Homes brings you beautiful, practical home decor ideas for bedrooms, kitchens, bathrooms, living rooms and small spaces."
+    content="Hybrid Homes brings you practical and beautiful home decor ideas for bedrooms, kitchens, bathrooms, living rooms and small spaces."
   >
 
   <style>
 
-    /* =========================================
-       HYBRID HOMES
-       GLOBAL STYLES
-       ========================================= */
+    /* =========================
+       RESET
+    ========================= */
 
     * {
       box-sizing: border-box;
@@ -33,14 +30,13 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7f5f0;
-      color: #222;
+      color: #202020;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
     img {
-      width: 100%;
       display: block;
+      width: 100%;
     }
 
     a {
@@ -48,207 +44,222 @@
       text-decoration: none;
     }
 
-    .container {
-      width: min(1180px, 92%);
-      margin: auto;
-    }
 
-
-    /* =========================================
+    /* =========================
        HEADER
-       ========================================= */
+    ========================= */
 
     header {
-      background: #fff;
-      border-bottom: 1px solid #e7e3dc;
+      background: #ffffff;
+      border-bottom: 1px solid #dedbd4;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 100;
     }
 
-    .nav {
-      min-height: 78px;
+    .header-inner {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 82px;
+      padding: 0 30px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
     }
 
     .logo {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: bold;
-      letter-spacing: -1px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
     }
 
-    .nav-links {
+    nav {
       display: flex;
-      align-items: center;
       gap: 28px;
       font-size: 14px;
+      font-weight: 600;
     }
 
-    .nav-links a:hover {
-      opacity: .6;
+    nav a {
+      transition: opacity 0.2s ease;
     }
 
-    .nav-button {
-      background: #222;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 3px;
-      font-weight: bold;
+    nav a:hover {
+      opacity: 0.55;
     }
 
 
-    /* =========================================
+    /* =========================
        HERO
-       ========================================= */
+    ========================= */
 
     .hero {
-      min-height: 650px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.97) 0%,
-          rgba(255,255,255,.88) 42%,
-          rgba(255,255,255,.25) 100%
-        ),
-        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85")
-        center/cover no-repeat;
+      max-width: 1200px;
+      margin: auto;
+      min-height: 620px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      background: #ebe7de;
     }
 
     .hero-content {
-      width: min(650px, 92%);
-      margin-left: max(4%, calc((100% - 1180px) / 2));
-      padding: 70px 0;
+      padding: 90px 60px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .eyebrow {
-      text-transform: uppercase;
+      font-size: 12px;
       letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: bold;
-      color: #847b6e;
-      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #82796b;
+      margin-bottom: 22px;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(55px, 7vw, 92px);
-      line-height: .92;
+      font-size: clamp(52px, 6vw, 88px);
+      line-height: 0.95;
       letter-spacing: -4px;
       margin-bottom: 28px;
-      max-width: 700px;
     }
 
     .hero p {
-      font-size: 19px;
-      max-width: 560px;
-      color: #555;
-      margin-bottom: 32px;
-    }
-
-    .primary-button {
-      display: inline-block;
-      background: #222;
-      color: #fff;
-      padding: 16px 25px;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: .5px;
-      transition: .2s;
-    }
-
-    .primary-button:hover {
-      transform: translateY(-2px);
-      background: #000;
-    }
-
-
-    /* =========================================
-       SECTION HEADERS
-       ========================================= */
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 30px;
+      max-width: 500px;
+      color: #5f5b55;
+      font-size: 17px;
       margin-bottom: 35px;
     }
 
-    .section-header h2 {
+    .button {
+      display: inline-flex;
+      width: fit-content;
+      background: #202020;
+      color: white;
+      padding: 16px 27px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      min-height: 620px;
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.05),
+          rgba(255,255,255,0.05)
+        ),
+        url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 30px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 35px;
+      gap: 20px;
+    }
+
+    .section-heading h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: .95;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
       letter-spacing: -2px;
     }
 
     .section-link {
       text-decoration: underline;
       font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
 
-    /* =========================================
-       ROOM CARDS
-       ========================================= */
+    /* =========================
+       ROOM CATEGORIES
+    ========================= */
 
     .room-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
+      gap: 14px;
     }
 
     .room-card {
       position: relative;
-      height: 330px;
+      height: 300px;
       overflow: hidden;
-      border-radius: 2px;
       background: #ddd;
     }
 
     .room-card img {
       height: 100%;
       object-fit: cover;
-      transition: transform .5s ease;
+      transition: transform 0.5s ease;
     }
 
     .room-card:hover img {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .room-overlay {
       position: absolute;
       inset: 0;
+
       display: flex;
       align-items: end;
-      padding: 20px;
+
+      padding: 22px;
+
+      background:
+        linear-gradient(
+          transparent 35%,
+          rgba(0,0,0,0.72)
+        );
+
       color: white;
-      background: linear-gradient(
-        transparent 40%,
-        rgba(0,0,0,.72)
-      );
     }
 
     .room-overlay h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 27px;
+      font-size: 24px;
     }
 
 
-    /* =========================================
-       ARTICLE GRID
-       ========================================= */
+    /* =========================
+       LATEST INSPIRATION
+    ========================= */
+
+    .latest {
+      background: #ffffff;
+    }
 
     .article-grid {
       display: grid;
@@ -257,25 +268,28 @@
     }
 
     .article-card {
-      background: #fff;
-      border: 1px solid #e8e3db;
+      background: #f7f5f0;
+      border: 1px solid #e3dfd7;
       overflow: hidden;
-      transition: transform .25s ease;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .article-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
     }
 
     .article-image {
-      height: 270px;
+      aspect-ratio: 4 / 3;
       overflow: hidden;
     }
 
     .article-image img {
       height: 100%;
       object-fit: cover;
-      transition: transform .5s ease;
+      transition: transform 0.5s ease;
     }
 
     .article-card:hover .article-image img {
@@ -283,38 +297,91 @@
     }
 
     .article-content {
-      padding: 24px;
+      padding: 26px;
     }
 
     .category {
-      display: block;
-      color: #8b8173;
       font-size: 11px;
-      font-weight: bold;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      color: #8b8172;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
     .article-content h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 27px;
       line-height: 1.05;
-      margin-bottom: 12px;
+      letter-spacing: -0.7px;
+      margin-bottom: 15px;
     }
 
     .article-content p {
-      color: #666;
+      color: #68645e;
       font-size: 14px;
     }
 
 
-    /* =========================================
-       STYLE SECTION
-       ========================================= */
+    /* =========================
+       FEATURED ARTICLE
+    ========================= */
 
-    .style-section {
-      background: #e9e4da;
+    .featured {
+      margin-top: 55px;
+
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+
+      background: #ebe7de;
+    }
+
+    .featured-image {
+      min-height: 500px;
+    }
+
+    .featured-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      padding: 60px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-content h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 4vw, 58px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 25px;
+    }
+
+    .featured-content p {
+      color: #625e57;
+      margin-bottom: 30px;
+    }
+
+
+    /* =========================
+       STYLE SECTION
+    ========================= */
+
+    .styles {
+      background: #202020;
+      color: white;
+    }
+
+    .styles .section-heading h2 {
+      color: white;
+    }
+
+    .styles .section-link {
+      color: white;
     }
 
     .style-grid {
@@ -324,15 +391,18 @@
     }
 
     .style-card {
-      min-height: 330px;
-      position: relative;
-      display: flex;
-      align-items: end;
+      min-height: 300px;
       padding: 28px;
-      color: white;
-      overflow: hidden;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+
       background-size: cover;
       background-position: center;
+
+      position: relative;
+      overflow: hidden;
     }
 
     .style-card::before {
@@ -340,8 +410,8 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(
-        transparent 30%,
-        rgba(0,0,0,.8)
+        transparent 20%,
+        rgba(0,0,0,0.82)
       );
     }
 
@@ -352,130 +422,167 @@
 
     .style-card h3 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
-      margin-bottom: 7px;
+      font-size: 29px;
+      margin-bottom: 5px;
     }
 
     .style-card p {
       font-size: 13px;
-      opacity: .9;
+      color: #ddd;
+    }
+
+    .style-small-spaces {
+      background-image:
+        url("https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .style-japandi {
+      background-image:
+        url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85");
+    }
+
+    .style-cozy {
+      background-image:
+        url("https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=900&q=85");
     }
 
 
-    /* =========================================
+    /* =========================
        NEWSLETTER
-       ========================================= */
+    ========================= */
 
     .newsletter {
-      padding: 90px 0;
-    }
+      max-width: 1200px;
+      margin: 90px auto;
+      padding: 65px 40px;
 
-    .newsletter-box {
-      background: #ded8cb;
-      padding: 65px 30px;
+      background: #e9e3d7;
+
       text-align: center;
     }
 
-    .newsletter-box h2 {
+    .newsletter h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(36px, 5vw, 58px);
+      font-size: clamp(36px, 5vw, 55px);
       line-height: 1;
       margin-bottom: 15px;
     }
 
-    .newsletter-box p {
-      max-width: 530px;
-      margin: 0 auto 25px;
-      color: #555;
+    .newsletter p {
+      max-width: 550px;
+      margin: 0 auto 28px;
+      color: #656057;
     }
 
     .newsletter-form {
-      display: flex;
-      max-width: 520px;
+      max-width: 500px;
       margin: auto;
+
+      display: flex;
     }
 
     .newsletter-form input {
       flex: 1;
-      border: 1px solid #aaa;
+      min-width: 0;
+
+      border: 1px solid #c7c0b4;
       padding: 15px;
       font-size: 14px;
-      min-width: 0;
+      background: white;
     }
 
     .newsletter-form button {
-      background: #222;
-      color: #fff;
-      border: 0;
-      padding: 15px 22px;
-      font-weight: bold;
+      border: none;
+      background: #202020;
+      color: white;
+      padding: 0 25px;
+
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       cursor: pointer;
     }
 
 
-    /* =========================================
+    /* =========================
        FOOTER
-       ========================================= */
+    ========================= */
 
     footer {
-      background: #fff;
-      border-top: 1px solid #e4e0d9;
-      padding: 65px 0 25px;
+      background: #ffffff;
+      border-top: 1px solid #ddd8cf;
     }
 
-    .footer-grid {
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 65px 30px 30px;
+
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr 1fr;
       gap: 50px;
-      padding-bottom: 50px;
     }
 
     .footer-brand h2 {
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 30px;
+      margin-bottom: 15px;
     }
 
     .footer-brand p {
       max-width: 300px;
-      color: #666;
-      font-size: 14px;
+      color: #6c6861;
+      font-size: 13px;
     }
 
-    footer h4 {
-      margin-bottom: 15px;
-      font-size: 13px;
+    .footer-column h4 {
+      font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
     }
 
-    footer ul {
-      list-style: none;
-    }
-
-    footer li {
-      margin-bottom: 8px;
-      color: #666;
+    .footer-column a {
+      display: block;
+      color: #68645e;
       font-size: 13px;
+      margin-bottom: 9px;
+    }
+
+    .footer-column a:hover {
+      color: #000;
     }
 
     .copyright {
-      border-top: 1px solid #e8e4dd;
-      padding-top: 20px;
-      color: #888;
+      max-width: 1200px;
+      margin: auto;
+      padding: 25px 30px;
+
+      border-top: 1px solid #e2ded7;
+
+      color: #88827a;
       font-size: 11px;
       text-align: center;
     }
 
 
-    /* =========================================
+    /* =========================
        TABLET
-       ========================================= */
+    ========================= */
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
 
-      .nav-links {
-        display: none;
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        padding: 70px 35px;
+      }
+
+      .hero-image {
+        min-height: 450px;
       }
 
       .room-grid {
@@ -486,124 +593,143 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .featured {
+        grid-template-columns: 1fr;
       }
+
+      .featured-image {
+        min-height: 400px;
+      }
+
+      .style-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
     }
 
 
-    /* =========================================
+    /* =========================
        MOBILE
-       ========================================= */
+    ========================= */
 
     @media (max-width: 600px) {
 
-      .container {
-        width: calc(100% - 32px);
+      body {
+        font-size: 15px;
       }
 
-      header {
-        position: relative;
-      }
-
-      .nav {
-        min-height: 64px;
+      .header-inner {
+        min-height: 62px;
+        padding: 0 18px;
       }
 
       .logo {
-        font-size: 25px;
+        font-size: 24px;
+        letter-spacing: -1px;
       }
 
+      nav {
+        display: none;
+      }
+
+
+      /* HERO */
+
       .hero {
-        min-height: 590px;
-        background:
-          linear-gradient(
-            90deg,
-            rgba(255,255,255,.96),
-            rgba(255,255,255,.78)
-          ),
-          url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85")
-          center/cover no-repeat;
+        display: flex;
+        flex-direction: column-reverse;
+        min-height: auto;
+        margin: 0;
+      }
+
+      .hero-image {
+        min-height: 330px;
       }
 
       .hero-content {
-        width: calc(100% - 32px);
-        margin: auto;
-        padding: 60px 0;
+        padding: 45px 20px 50px;
       }
 
       .eyebrow {
-        font-size: 11px;
+        font-size: 10px;
         letter-spacing: 2px;
-        margin-bottom: 16px;
+        margin-bottom: 15px;
       }
 
       .hero h1 {
-        font-size: 54px;
-        line-height: .91;
+        font-size: clamp(43px, 13vw, 64px);
         letter-spacing: -2.5px;
-        margin-bottom: 22px;
+        line-height: 0.94;
+        margin-bottom: 20px;
       }
 
       .hero p {
-        font-size: 16px;
-        line-height: 1.55;
+        font-size: 15px;
+        line-height: 1.6;
         margin-bottom: 25px;
       }
 
-      .primary-button {
+      .button {
         padding: 14px 20px;
+        font-size: 11px;
       }
 
-      .section {
-        padding: 58px 0;
+
+      /* GENERAL */
+
+      .container {
+        padding: 55px 14px;
       }
 
-      .section-header {
-        display: block;
-        margin-bottom: 25px;
+      .section-heading {
+        align-items: end;
+        margin-bottom: 22px;
       }
 
-      .section-header h2 {
-        font-size: 39px;
-        margin-bottom: 10px;
+      .section-heading h2 {
+        font-size: 37px;
+        letter-spacing: -1.5px;
       }
 
       .section-link {
-        font-size: 13px;
+        font-size: 11px;
       }
 
-      /* Room cards become a horizontal scroll */
+
+      /* ROOMS */
+
       .room-grid {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        padding-bottom: 8px;
-        scroll-snap-type: x mandatory;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
       }
 
       .room-card {
-        flex: 0 0 145px;
-        height: 205px;
-        scroll-snap-align: start;
+        height: 210px;
+      }
+
+      .room-card:nth-child(5) {
+        grid-column: span 2;
       }
 
       .room-overlay {
-        padding: 13px;
+        padding: 14px;
       }
 
       .room-overlay h3 {
         font-size: 20px;
       }
 
-      /* Articles become one column */
+
+      /* ARTICLES */
+
       .article-grid {
         grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .article-image {
-        height: 245px;
+        gap: 18px;
       }
 
       .article-content {
@@ -615,35 +741,58 @@
       }
 
       .article-content p {
-        font-size: 14px;
+        font-size: 13px;
       }
 
-      /* Style cards */
+
+      /* FEATURED */
+
+      .featured {
+        margin-top: 35px;
+      }
+
+      .featured-image {
+        min-height: 300px;
+      }
+
+      .featured-content {
+        padding: 35px 22px;
+      }
+
+      .featured-content h2 {
+        font-size: 38px;
+      }
+
+
+      /* STYLES */
+
+      .styles {
+        margin-top: 0;
+      }
+
       .style-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 10px;
       }
 
       .style-card {
-        min-height: 220px;
-        padding: 22px;
+        min-height: 230px;
       }
 
-      .style-card h3 {
-        font-size: 28px;
-      }
 
-      /* Newsletter */
+      /* NEWSLETTER */
+
       .newsletter {
-        padding: 55px 0;
-      }
-
-      .newsletter-box {
+        margin: 50px 14px;
         padding: 45px 20px;
       }
 
-      .newsletter-box h2 {
+      .newsletter h2 {
         font-size: 38px;
+      }
+
+      .newsletter p {
+        font-size: 13px;
       }
 
       .newsletter-form {
@@ -651,36 +800,36 @@
         gap: 8px;
       }
 
-      .newsletter-form input,
-      .newsletter-form button {
+      .newsletter-form input {
         width: 100%;
       }
 
-      /* Footer */
-      footer {
-        padding: 50px 0 20px;
+      .newsletter-form button {
+        height: 46px;
       }
 
-      .footer-grid {
+
+      /* FOOTER */
+
+      .footer-inner {
         grid-template-columns: 1fr 1fr;
         gap: 35px 20px;
+        padding: 45px 20px 25px;
       }
 
       .footer-brand {
-        grid-column: 1 / -1;
+        grid-column: span 2;
       }
 
       .footer-brand h2 {
-        font-size: 28px;
+        font-size: 27px;
       }
 
-      footer h4 {
-        font-size: 11px;
+      .copyright {
+        padding: 20px;
+        font-size: 9px;
       }
 
-      footer li {
-        font-size: 12px;
-      }
     }
 
   </style>
@@ -690,29 +839,23 @@
 <body>
 
 
-  <!-- =========================================
+  <!-- =========================
        HEADER
-       ========================================= -->
+  ========================= -->
 
   <header>
 
-    <div class="container nav">
+    <div class="header-inner">
 
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         Hybrid Homes
       </a>
 
-      <nav class="nav-links">
-
+      <nav>
         <a href="#rooms">Rooms</a>
         <a href="#latest">Inspiration</a>
         <a href="#styles">Styles</a>
-        <a href="#newsletter">Newsletter</a>
-
-        <a href="#latest" class="nav-button">
-          Explore Ideas
-        </a>
-
+        <a href="#about">About</a>
       </nav>
 
     </div>
@@ -721,9 +864,9 @@
 
 
 
-  <!-- =========================================
+  <!-- =========================
        HERO
-       ========================================= -->
+  ========================= -->
 
   <main>
 
@@ -736,17 +879,116 @@
         </div>
 
         <h1>
-          Beautiful spaces.<br>
+          Beautiful<br>
+          spaces.<br>
           Better living.
         </h1>
 
         <p>
-          Inspiring home decor ideas to help you create a home
-          that feels beautiful, comfortable and truly yours.
+          Inspiring home decor ideas to help you create a
+          home that feels beautiful, comfortable and truly yours.
         </p>
 
-        <a href="#latest" class="primary-button">
-          EXPLORE IDEAS
+        <a href="#latest" class="button">
+          Explore Ideas
+        </a>
+
+      </div>
+
+      <div class="hero-image"></div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ROOMS
+    ========================= -->
+
+    <section id="rooms" class="container">
+
+      <div class="section-heading">
+
+        <h2>
+          Explore by Room
+        </h2>
+
+        <a href="#latest" class="section-link">
+          View all ideas →
+        </a>
+
+      </div>
+
+
+      <div class="room-grid">
+
+        <a href="#latest" class="room-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=700&q=85"
+            alt="Modern kitchen"
+          >
+
+          <div class="room-overlay">
+            <h3>Kitchen</h3>
+          </div>
+
+        </a>
+
+
+        <a href="#latest" class="room-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=85"
+            alt="Cozy bedroom"
+          >
+
+          <div class="room-overlay">
+            <h3>Bedroom</h3>
+          </div>
+
+        </a>
+
+
+        <a href="#latest" class="room-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=85"
+            alt="Modern bathroom"
+          >
+
+          <div class="room-overlay">
+            <h3>Bathroom</h3>
+          </div>
+
+        </a>
+
+
+        <a href="#latest" class="room-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=85"
+            alt="Modern living room"
+          >
+
+          <div class="room-overlay">
+            <h3>Living Room</h3>
+          </div>
+
+        </a>
+
+
+        <a href="#latest" class="room-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&q=85"
+            alt="Outdoor home decor"
+          >
+
+          <div class="room-overlay">
+            <h3>Outdoor</h3>
+          </div>
+
         </a>
 
       </div>
@@ -755,131 +997,25 @@
 
 
 
-    <!-- =========================================
-         EXPLORE BY ROOM
-         ========================================= -->
-
-    <section class="section" id="rooms">
-
-      <div class="container">
-
-        <div class="section-header">
-
-          <h2>
-            Explore by Room
-          </h2>
-
-          <a href="#latest" class="section-link">
-            View all categories →
-          </a>
-
-        </div>
-
-
-        <div class="room-grid">
-
-
-          <a href="#latest" class="room-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=85"
-              alt="Modern kitchen"
-            >
-
-            <div class="room-overlay">
-              <h3>Kitchen</h3>
-            </div>
-
-          </a>
-
-
-
-          <a href="#latest" class="room-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=85"
-              alt="Cozy bedroom"
-            >
-
-            <div class="room-overlay">
-              <h3>Bedroom</h3>
-            </div>
-
-          </a>
-
-
-
-          <a href="#latest" class="room-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85"
-              alt="Modern bathroom"
-            >
-
-            <div class="room-overlay">
-              <h3>Bathroom</h3>
-            </div>
-
-          </a>
-
-
-
-          <a href="#latest" class="room-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=85"
-              alt="Modern living room"
-            >
-
-            <div class="room-overlay">
-              <h3>Living Room</h3>
-            </div>
-
-          </a>
-
-
-
-          <a href="#latest" class="room-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=85"
-              alt="Beautiful outdoor space"
-            >
-
-            <div class="room-overlay">
-              <h3>Outdoor</h3>
-            </div>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================================
+    <!-- =========================
          LATEST INSPIRATION
-         ========================================= -->
+    ========================= -->
 
-    <section class="section" id="latest">
+    <section id="latest" class="latest">
 
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-heading">
 
           <h2>
             Latest Inspiration
           </h2>
 
-          <a href="#" class="section-link">
+          <a href="#latest" class="section-link">
             View all articles →
           </a>
 
         </div>
-
 
 
         <div class="article-grid">
@@ -887,29 +1023,29 @@
 
           <!-- ARTICLE 1 -->
 
-          <a href="#" class="article-card">
+          <a href="cozy-bedroom-ideas.html" class="article-card">
 
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
-                alt="Cozy bedroom with warm neutral decor"
+                src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85"
+                alt="Cozy bedroom interior"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
+              <div class="category">
                 Bedroom
-              </span>
+              </div>
 
               <h3>
                 30 Cozy Bedroom Ideas You'll Want to Copy
               </h3>
 
               <p>
-                Warm colors, layered bedding and thoughtful
+                Warm colors, soft textures and thoughtful
                 details for a bedroom that feels inviting.
               </p>
 
@@ -926,25 +1062,25 @@
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
-                alt="Modern kitchen with warm wood"
+                src="https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=900&q=85"
+                alt="Modern kitchen interior"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
+              <div class="category">
                 Kitchen
-              </span>
+              </div>
 
               <h3>
                 Modern Kitchen Backsplash Ideas That Instantly Elevate the Space
               </h3>
 
               <p>
-                Beautiful backsplash ideas that add personality,
-                warmth and style to your kitchen.
+                Beautiful backsplash ideas that add character,
+                warmth and personality to your kitchen.
               </p>
 
             </div>
@@ -960,25 +1096,25 @@
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
-                alt="Cozy modern living room"
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+                alt="Small living room"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
+              <div class="category">
                 Living Room
-              </span>
+              </div>
 
               <h3>
                 Small Living Room Layout Ideas That Actually Work
               </h3>
 
               <p>
-                Smart furniture placement and simple design
-                tricks for making a small living room work better.
+                Smart furniture placement ideas that help
+                smaller living rooms feel comfortable and open.
               </p>
 
             </div>
@@ -994,25 +1130,25 @@
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
-                alt="Spa inspired bathroom"
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85"
+                alt="Spa-like bathroom"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
+              <div class="category">
                 Bathroom
-              </span>
+              </div>
 
               <h3>
                 Bathroom Ideas for a Relaxing Spa-Like Atmosphere
               </h3>
 
               <p>
-                Create a calmer bathroom with warm lighting,
-                natural textures and thoughtful styling.
+                Calm colors, soft lighting and natural materials
+                for a more relaxing bathroom.
               </p>
 
             </div>
@@ -1028,25 +1164,25 @@
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=1000&q=85"
-                alt="Warm modern bedroom"
+                src="https://images.unsplash.com/photo-1615529162924-f8605388461d?auto=format&fit=crop&w=900&q=85"
+                alt="Earth tone bedroom"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
+              <div class="category">
                 Bedroom
-              </span>
+              </div>
 
               <h3>
                 Earth-Tone Bedroom Ideas for a Calm, Cozy Atmosphere
               </h3>
 
               <p>
-                Bring warmth and natural character into your
-                bedroom with earthy tones and soft textures.
+                Natural colors and warm textures that create
+                a peaceful bedroom retreat.
               </p>
 
             </div>
@@ -1062,31 +1198,69 @@
             <div class="article-image">
 
               <img
-                src="https://images.unsplash.com/photo-1600566753051-0e5f3a3e1a3a?auto=format&fit=crop&w=1000&q=85"
-                alt="Beautiful home interior"
+                src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=85"
+                alt="Modern warm living room"
               >
 
             </div>
 
             <div class="article-content">
 
-              <span class="category">
-                Home Decor
-              </span>
+              <div class="category">
+                Living Room
+              </div>
 
               <h3>
-                Home Decor Ideas That Make Any Space Feel More Put Together
+                Living Room Ideas That Make a Home Feel More Expensive
               </h3>
 
               <p>
-                Simple styling changes that can make your home
-                feel more intentional, comfortable and complete.
+                Simple design choices that make a living room
+                feel polished without making it feel cold.
               </p>
 
             </div>
 
           </a>
 
+        </div>
+
+
+
+        <!-- FEATURED -->
+
+        <div class="featured">
+
+          <div class="featured-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85"
+              alt="Warm modern interior"
+            >
+
+          </div>
+
+          <div class="featured-content">
+
+            <div class="category">
+              Featured Style
+            </div>
+
+            <h2>
+              Modern design,
+              made warmer.
+            </h2>
+
+            <p>
+              Discover interiors that balance clean lines,
+              natural materials, warm colors and everyday comfort.
+            </p>
+
+            <a href="#styles" class="button">
+              Explore Styles
+            </a>
+
+          </div>
 
         </div>
 
@@ -1096,15 +1270,15 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          FIND YOUR STYLE
-         ========================================= -->
+    ========================= -->
 
-    <section class="section style-section" id="styles">
+    <section id="styles" class="styles">
 
       <div class="container">
 
-        <div class="section-header">
+        <div class="section-heading">
 
           <h2>
             Find Your Style
@@ -1120,11 +1294,7 @@
         <div class="style-grid">
 
 
-          <a
-            href="#latest"
-            class="style-card"
-            style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85')"
-          >
+          <a href="#latest" class="style-card style-small-spaces">
 
             <div class="style-card-content">
 
@@ -1133,7 +1303,7 @@
               </h3>
 
               <p>
-                Smart decor ideas for apartments and small homes.
+                Smart ideas for apartments and small homes.
               </p>
 
             </div>
@@ -1142,11 +1312,7 @@
 
 
 
-          <a
-            href="#latest"
-            class="style-card"
-            style="background-image:url('https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=1000&q=85')"
-          >
+          <a href="#latest" class="style-card style-japandi">
 
             <div class="style-card-content">
 
@@ -1164,11 +1330,7 @@
 
 
 
-          <a
-            href="#latest"
-            class="style-card"
-            style="background-image:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=85')"
-          >
+          <a href="#latest" class="style-card style-cozy">
 
             <div class="style-card-content">
 
@@ -1184,7 +1346,6 @@
 
           </a>
 
-
         </div>
 
       </div>
@@ -1193,136 +1354,118 @@
 
 
 
-    <!-- =========================================
+    <!-- =========================
          NEWSLETTER
-         ========================================= -->
+    ========================= -->
 
-    <section class="newsletter" id="newsletter">
+    <section class="newsletter">
 
-      <div class="container">
+      <h2>
+        Get beautiful home ideas in your inbox.
+      </h2>
 
-        <div class="newsletter-box">
+      <p>
+        Simple inspiration and practical decor ideas
+        delivered when you need them.
+      </p>
 
-          <h2>
-            Get beautiful home ideas in your inbox.
-          </h2>
 
-          <p>
-            Simple inspiration and practical decor ideas
-            delivered when you need them.
-          </p>
+      <form class="newsletter-form">
 
-          <form class="newsletter-form">
+        <input
+          type="email"
+          placeholder="Your email address"
+          aria-label="Email address"
+          required
+        >
 
-            <input
-              type="email"
-              placeholder="Your email address"
-              aria-label="Email address"
-            >
+        <button type="submit">
+          Subscribe
+        </button>
 
-            <button type="submit">
-              SUBSCRIBE
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
+      </form>
 
     </section>
+
 
   </main>
 
 
 
-  <!-- =========================================
+  <!-- =========================
        FOOTER
-       ========================================= -->
+  ========================= -->
 
-  <footer>
+  <footer id="about">
 
-    <div class="container">
-
-      <div class="footer-grid">
+    <div class="footer-inner">
 
 
-        <div class="footer-brand">
+      <div class="footer-brand">
 
-          <h2>
-            Hybrid Homes
-          </h2>
+        <h2>
+          Hybrid Homes
+        </h2>
 
-          <p>
-            Beautiful, practical home decor inspiration
-            for creating a home you love.
-          </p>
-
-        </div>
-
-
-
-        <div>
-
-          <h4>
-            Categories
-          </h4>
-
-          <ul>
-            <li><a href="#rooms">Kitchen</a></li>
-            <li><a href="#rooms">Bedroom</a></li>
-            <li><a href="#rooms">Bathroom</a></li>
-            <li><a href="#rooms">Living Room</a></li>
-            <li><a href="#rooms">Outdoor</a></li>
-          </ul>
-
-        </div>
-
-
-
-        <div>
-
-          <h4>
-            Explore
-          </h4>
-
-          <ul>
-            <li><a href="#styles">Small Spaces</a></li>
-            <li><a href="#styles">Organization</a></li>
-            <li><a href="#styles">DIY & Budget</a></li>
-            <li><a href="#styles">Home Office</a></li>
-            <li><a href="#styles">Decor</a></li>
-          </ul>
-
-        </div>
-
-
-
-        <div>
-
-          <h4>
-            Info
-          </h4>
-
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
-          </ul>
-
-        </div>
-
+        <p>
+          Beautiful, practical home inspiration
+          for creating a space you love living in.
+        </p>
 
       </div>
 
 
-      <div class="copyright">
 
-        © 2026 Hybrid Homes. All rights reserved.
+      <div class="footer-column">
+
+        <h4>
+          Explore
+        </h4>
+
+        <a href="#rooms">Bedrooms</a>
+        <a href="#rooms">Kitchens</a>
+        <a href="#rooms">Bathrooms</a>
+        <a href="#rooms">Living Rooms</a>
+        <a href="#rooms">Outdoor</a>
 
       </div>
 
+
+
+      <div class="footer-column">
+
+        <h4>
+          Categories
+        </h4>
+
+        <a href="#latest">Small Spaces</a>
+        <a href="#latest">Organization</a>
+        <a href="#latest">DIY & Budget</a>
+        <a href="#latest">Furniture</a>
+        <a href="#latest">Lighting</a>
+
+      </div>
+
+
+
+      <div class="footer-column">
+
+        <h4>
+          Info
+        </h4>
+
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Hybrid Homes. All rights reserved.
     </div>
 
   </footer>
